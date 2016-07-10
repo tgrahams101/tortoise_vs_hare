@@ -20,9 +20,12 @@ $('body').on("keyup", function(event){
 });
 //manipulate DOM elements using jquery, checking what you have/changed...need any help..youll do well
 
-$("#playerbstart").on("click", function(){
+$('body').on("keyup", function(){
+  var key=event.which;
+  if (event.which==38){
   $("#playerbstart").addClass("makeblack");
-    if($("#playerastart").hasClass("makeblack")){
+}
+  if($("#playerastart").hasClass("makeblack")){
       startGame();
     }
 });
