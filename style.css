@@ -1,0 +1,15 @@
+table {
+  border: solid 2px;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  border: solid 2px;
+}
+
+
+.makeblack {
+   background-color: rgb(0,0,0);
+
+}
