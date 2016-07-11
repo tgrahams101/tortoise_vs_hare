@@ -73,7 +73,7 @@ $('body').on("keyup", function(){
 
   }
 
-$('button').on("click",function(){
+$('#changecourse').on("click",function(){
 $('.container').toggleClass("forest");
 });
 //   $('button').click(function(){
