@@ -13,8 +13,8 @@ table {
 }
 
 td {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   /*border: ;*/
 }
 
@@ -46,8 +46,10 @@ margin: 0 auto;
 
 .turtle {
   background-image: url("turtle.jpeg");
+  background-size: cover;
 }
 
 .hare {
   background-image: url("hare.jpg");
+  background-size: cover;
 }
