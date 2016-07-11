@@ -1,3 +1,8 @@
+
+td {
+  color: white;
+  text-decoration: underline;
+}
 h1 {
   font-family: 'Lobster', Georgia, Times, serif;
   text-align: center;
@@ -9,14 +14,13 @@ h4 {
 }
 
 table {
+  border-collapse: collapse;
   /*border: solid 2px;*/
 }
 
-td {
-  height: 20px;
-  width: 20px;
-  /*border: ;*/
-}
+.table th, .table td {
+     border-top: none !important;
+ }
 
 .container {
   background-image: url("grassyracebackground.jpeg");
@@ -35,7 +39,7 @@ td {
 }
 
 .table{
-height:100%;
+height: 600px;
 margin: 0 auto;
 }
 
@@ -46,10 +50,10 @@ margin: 0 auto;
 
 .turtle {
   background-image: url("turtle.jpeg");
-  background-size: cover;
+
 }
 
 .hare {
-  background-image: url("hare.jpg");
-  background-size: cover;
+  background-image: url("hare.jpg") ;
+  /*background-size: cover;*/
 }

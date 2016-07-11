@@ -1,6 +1,12 @@
 
 
 $(document).on('ready', function(){
+  setTimeout(function()
+     {
+         alert("Welcome to the Tortoise vs. Hare Racing Game. Player 1 controls the hare while Player 2 controls the Tortoise. When you both are ready to race, Player 1 presses the Letter 'W' to move. Player 2, you must press the UP arrow key to move. REMEMBER TO START PRESSING YOUR RESPECTIVE KEYS AT THE SAME TIME. NO CHEATING OR FALSE STARTS!! If there's a false start, click 'reset' at the bottom.");
+     },
+     3000);
+
  var x=0;
  var y=0;
 function resetAll(){
@@ -12,7 +18,7 @@ function resetAll(){
   //  d=1;
 }
 
-$("button").on('click', function(){
+$("reset").on('click', function(){
           resetAll();
 });
 
@@ -21,7 +27,7 @@ $('body').on("keyup", function(event){
     // $("#playerastart").addClass("makeblack");
    if (event.which==87){
 
-   $("#playerastart").addClass("hare");
+  //  $("#playerastart").addClass("hare");
   a=1;
   startPlayerA();
   //  doIStartGame();
@@ -33,7 +39,7 @@ $('body').on("keyup", function(){
   var key=event.which;
 //what about putting a variable that toggles between 0 and 1?
   if (event.which==38){
-  $("#playerbstart").addClass("turtle");
+  // $("#playerbstart").addClass("turtle");
   b=81;
   // doIStartGame();
   startPlayerB();
@@ -50,8 +56,17 @@ $('body').on("keyup", function(){
  function startPlayerA(){
 
     $("body").on("keyup", function(){
+      if ($('.book20').hasClass("hare") && $('.book20').hasClass("hare")){
+        alert ("IT'S A DRAW!! YOU TWO ARE EQUALLY FAST!");
+        $('.book20').removeClass("hare");
+        $('.book100').removeClass("turtle");
+      }
 
-        if ($('#playerastart').hasClass("hare")){
+      else if ($('.book20').hasClass("hare")){
+          alert("Player 1 has won. Hares are damn'd fast aren't they? SO SO QUICK!");
+          $('.book20').removeClass("hare");
+      }
+      else if ($('#playerastart').hasClass("hare")){
           if (event.which==87){
 
         //  for(i=1;i<1000; i++){
@@ -77,10 +92,15 @@ $('body').on("keyup", function(){
       });
     }
 
-        function startPlayerB(){
-          $("body").on("keyup", function(){
+  function startPlayerB(){
+   $("body").on("keyup", function(){
 
-        if ($('#playerbstart').hasClass("turtle")){
+    if ($('.book100').hasClass("turtle")){
+        alert("Player 2 has won. As a wise woman once said, 'Slow and steady wins the race.' She was right for sure! The tortoise is victorious!");
+         $('.book100').removeClass("turtle");
+    }
+
+      else if ($('#playerbstart').hasClass("turtle")){
           if (event.which==38){
 
         //  for(i=1;i<1000; i++){
@@ -108,7 +128,9 @@ $('body').on("keyup", function(){
     }
 
     //  }
-
+$('#playmusic').on("click", function(event){
+  event.preventDefault();
+});
 
 
 $('#changecourse').on("click",function(){
@@ -124,7 +146,7 @@ $('.container').toggleClass("forest");
 
 
 
-alert("what the hell");
+
 
 
 
