@@ -1,0 +1,162 @@
+/*I did a makeshift shortcut for now for the rightpane div andt the #player2instructions paragraph. I screwed around with
+the positioning of paragraph element by setting negative positioning parameters. See its css for reference*/
+
+h1 {
+  font-family: 'Lobster', Georgia, Times, serif;
+  text-align: center;
+}
+
+h4,h3,p {
+   font-family: 'Cabin', Helvetica, Arial, sans-serif;
+   text-align: center;
+}
+
+.container {
+  background-image: url("grassyracebackground.jpeg");
+  background-size: cover;
+  height: 700px;
+
+}
+
+.board {
+  /*background-image: url("grassyracebackground.jpeg");
+  background-size: cover;*/
+  height: 700px;
+
+
+}
+
+.winnergraphic, .startgraphic {
+  display: none;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+pre {
+  text-shadow: none;
+}
+
+.grassy{
+  background-image: url("grassyracebackground.jpeg");
+  background-size: cover;
+}
+
+.forest{
+  background-image: url("forestgamebackground.jpeg");
+  background-size: cover;
+}
+
+.rightcolumn {
+  height: 100px;
+}
+
+.rightpane {
+ height; 500px;
+}
+
+#signature{
+  position: absolute;
+  bottom: 18px;
+  font-size: 10px;
+  font-style: italic;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  letter-spacing: 0px;
+  font-family: monospace;
+}
+
+#gobutton {
+  /*float: left;*/
+  height:200px;
+  width: 200px;
+  font-weight: bold;
+  font-size: 28px;
+
+}
+
+#startbutton{
+  background-color: red;
+  margin-top: 30px;
+  font-weight: bold;
+
+}
+
+#player2instructions {
+  position: absolute;
+  bottom: -520px;
+
+}
+
+#startline1 {
+   position: absolute;
+   font-weight: bold;
+   left: 50px;
+   bottom: 120px;
+   color: white;
+   text-decoration: underline;
+
+}
+
+#startline2{
+  position: absolute;
+  font-weight: bold;
+  left: 600px;
+  bottom: 120px;
+  color: white;
+  text-decoration: underline;
+}
+
+#player2start {
+   position: absolute;
+
+}
+
+
+#leftcolumn {
+  height: 600px;
+}
+
+#player1instructions{
+  position: absolute;
+  bottom: 50px;
+}
+
+#player2instructions, #player1instructions{
+  vertical-align: bottom;
+  color: white;
+  font-size: 25px;
+}
+
+#changecourse{
+  position: relative;
+
+}
+
+#playmusic{
+  font-size: 12px;
+}
+
+
+.player2 {
+  background-image: url("turtle.png");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  bottom: 130px;
+  left: 600px;
+
+}
+
+.player1 {
+  background-image: url("hare.png") ;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  bottom: 130px;
+  left: 50px;
+  /*background-size: 35px 25px;*/
+  /*background-size: cover;*/
+}

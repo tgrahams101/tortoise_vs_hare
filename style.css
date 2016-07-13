@@ -2,6 +2,7 @@
 td {
   color: white;
   text-decoration: underline;
+  text-shadow:2px 3px 2px #378ab4;
 }
 h1 {
   font-family: 'Lobster', Georgia, Times, serif;
@@ -16,6 +17,10 @@ h4 {
 table {
   border-collapse: collapse;
   /*border: solid 2px;*/
+}
+
+.nounderline {
+  text-decoration: none;
 }
 
 .table th, .table td {
@@ -49,11 +54,14 @@ margin: 0 auto;
 }
 
 .turtle {
-  background-image: url("turtle.jpeg");
+  background-image: url("turtle.png");
+  background-repeat: no-repeat;
 
 }
 
 .hare {
-  background-image: url("hare.jpg") ;
+  background-image: url("hare.png") ;
+  background-repeat: no-repeat;
+  background-size: 35px 25px;
   /*background-size: cover;*/
 }

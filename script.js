@@ -18,7 +18,7 @@ function resetAll(){
   //  d=1;
 }
 
-$("reset").on('click', function(){
+$("#reset").on('click', function(){
           resetAll();
 });
 
@@ -56,7 +56,7 @@ $('body').on("keyup", function(){
  function startPlayerA(){
 
     $("body").on("keyup", function(){
-      if ($('.book20').hasClass("hare") && $('.book20').hasClass("hare")){
+      if ($('.book20').hasClass("hare") && $('.book100').hasClass("turtle")){
         alert ("IT'S A DRAW!! YOU TWO ARE EQUALLY FAST!");
         $('.book20').removeClass("hare");
         $('.book100').removeClass("turtle");
