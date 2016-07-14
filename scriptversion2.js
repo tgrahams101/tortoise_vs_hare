@@ -20,12 +20,22 @@ var $player1instructions = $('#player1instructions');
 var $startbutton = $('#startbutton');
 var $toppanel = $('.toppanel');
 var $signature = $('#signature');
+var $reset = $('#reset');
+var $changecourse = $('#changecourse');
 
 var base= 20;
 var increment1 =20;
 var increment2 =20;
 var moveTotal1=base + increment1;
 var moveTotal2=base+ increment2;
+
+ $reset.click(function (){
+   location.reload();
+ });
+
+ $changecourse.click(function (){
+   $('.container').toggleClass('forest');
+ });
 
 $startbutton.click(function (){
       $startgraphic.show("slow");
