@@ -26,10 +26,22 @@ h4,h3,p {
 
 }
 
-.winnergraphic, .startgraphic {
+.startgraphic {
   display: none;
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.winnergraphic1 {
+  display: none;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+}
+
+.winnergraphic2 {
+  display: none;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
 }
 
 pre {
@@ -98,6 +110,15 @@ pre {
 
 }
 
+#finishline1 {
+  position: absolute;
+  font-weight: bold;
+  left: 50px;
+  top: 0px;
+  color: white;
+  text-decoration: underline;
+}
+
 #startline2{
   position: absolute;
   font-weight: bold;
@@ -107,9 +128,13 @@ pre {
   text-decoration: underline;
 }
 
-#player2start {
-   position: absolute;
-
+#finishline2 {
+  position: absolute;
+  font-weight: bold;
+  left: 600px;
+  top: 0px;
+  color: white;
+  text-decoration: underline;
 }
 
 
@@ -130,7 +155,12 @@ pre {
 
 #changecourse{
   position: relative;
+  margin-top: 20px;
 
+}
+
+#reset {
+  margin-top: 20px;
 }
 
 #playmusic{

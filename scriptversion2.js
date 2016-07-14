@@ -22,6 +22,11 @@ var $toppanel = $('.toppanel');
 var $signature = $('#signature');
 var $reset = $('#reset');
 var $changecourse = $('#changecourse');
+var $container = $('.container');
+var $winnergraphic1 = $('.winnergraphic1');
+var $winnergraphic2 = $('.winnergraphic2');
+var $finishline1 = $('#finishline1');
+var $finishline2 = $('#finishline2');
 
 var base= 20;
 var increment1 =20;
@@ -34,7 +39,7 @@ var moveTotal2=base+ increment2;
  });
 
  $changecourse.click(function (){
-   $('.container').toggleClass('forest');
+   $container.toggleClass('forest');
  });
 
 $startbutton.click(function (){
@@ -49,10 +54,13 @@ $startbutton.click(function (){
         $player2.css("bottom", "20px");
         $startline1.css("bottom", "10px");
         $startline2.css("bottom", "10px");
+        $finishline1.css("top", "45px");
+        $finishline2.css("top", "45px");
         $signature.css("bottom", "-80px");
          startGame();
        });
 });
+
 
 function startGame(){
 
@@ -60,6 +68,16 @@ function startGame(){
   $(document).on("keyup", function (event){
 
       if(event.which==87){
+          var player1position = $player1.position();
+          var containerposition = $container.position();
+          var finishLine = containerposition.top + 60;
+        if (player1position.top < finishLine){
+          $winnergraphic1.show('slow');
+          $(document).off("keyup");
+          $player1.hide();
+          $player2.hide();
+
+        }
         $player1.animate({"bottom" : "+=20px"});
       }
 
@@ -84,8 +102,20 @@ function startGame(){
   $(document).on("keyup", function (event){
 
       if(event.which==38){
-          if($player2.css("bottom") >="1300px"){
-            alert("Player 2 wins!");
+          // if($player2.css("bottom") >="1300px"){
+          //   alert("Player 2 wins!");
+          // }
+
+          var player2position = $player2.position();
+          var containerposition = $container.position();
+          var finishLine = containerposition.top + 60;
+          if (player2position.top < finishLine){
+            $winnergraphic2.show('slow');
+            $(document).off("keyup");
+
+            $player1.hide();
+            $player2.hide();
+
           }
       {$player2.animate({"bottom" : "+=20px"});
         // increment1=increment2+20;
