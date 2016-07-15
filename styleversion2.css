@@ -117,6 +117,8 @@ pre {
   top: 0px;
   color: white;
   text-decoration: underline;
+  background: black;
+  border: solid 1px;
 }
 
 #startline2{
@@ -134,6 +136,8 @@ pre {
   left: 600px;
   top: 0px;
   color: white;
+  background: black;
+  border: 1px solid;
   text-decoration: underline;
 }
 
