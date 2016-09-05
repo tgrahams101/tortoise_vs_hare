@@ -5,70 +5,96 @@
     <!-- set viewport to device width to allow responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS from CDN -->
+        <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="style.css">
-  <script src="http://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-
-
+  <link rel="stylesheet" href="styleversion2.css">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
 
-    <script src="script.js"></script>
 
-    <title>Week 2 Game</title>
+        <!-- Scripts -->
+  <script src="http://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <script src="scriptversion2.js"></script>
+
+    <title>Tortoise vs. Hare Game</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-    <h1>Tortoise vs Hare!</h1>
-    <h4 class="lead"> Play now and RACE to THE FINISH!!!<h4>
-    <table class="table">
-      <tr><td   class="book20"></td><td>FINISH LINE</td><td class="book100"></td></tr>
-      <tr><td   class="book19"></td><td></td><td class="book99"></td></tr>
-      <tr><td   class="book18"></td><td></td><td class="book98"></td></tr>
-      <tr><td   class="book17"></td><td></td><td class="book97"></td></tr>
-      <tr><td   class="book16"></td><td></td><td class="book96"></td></tr>
-      <tr><td class="book15"></td><td></td><td class="book95"></td></tr>
-      <tr><td   class="book14"></td><td></td><td class="book94"></td></tr>
-      <tr><td   class="book13"></td><td></td><td class="book93"></td></tr>
-      <tr><td   class="book12"></td><td></td><td class="book92"></td></tr>
-      <tr><td   class="book11"></td><td></td><td class="book91"></td></tr>
-      <tr><td   class="book10">__</td><td>50 YARD LINE</td><td class="book90">__</td></tr>
-      <tr><td class="book9"></td><td></td><td class="book89"></td></tr>
-      <tr><td   class="book8"></td><td></td><td class="book88"></td></tr>
-      <tr><td   class="book7"></td><td></td><td class="book87"></td></tr>
-      <tr><td   class="book6"></td><td></td><td class="book86"></td></tr>
-      <tr><td class="book5"></td><td></td><td class="book85"></td></tr>
-      <tr><td   class="book4"></td><td></td><td class="book84"></td></tr>
-      <tr><td   class="book3"></td><td></td><td class="book83"></td></tr>
-      <tr><td   class="book2"></td><td></td><td class="book82"></td></tr>
-      <tr><td class="book1"></td><td></td><td class="book81"></td></tr>
-      <tr><td id="playerastart" class="hare"><span class="nounderline">Player 1</span> START</td><td></td><td class="turtle" id="playerbstart"><span class="nounderline">Player 2</span> START</td></tr>
-    <table>
-  <div class="row">
-      <div class="col-md-3">
-      <button id="reset" value="reset">Reset</button>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 toppanel">
+                <h1>Tortoise vs Hare!</h1>
+                <h4 class="lead"> Play now and RACE to THE FINISH!!!<h4>
+                <p>Game requires a certain screen size to display properly. Maximize your browser if necessary. Game does not work on mobile screens</p>
+            </div>
       </div>
-      <div class="col-md-3">
-      <button id="changecourse" value="changecourse">Switch Course</button>
-    </div>
+      <div class="col-md-8 col-md-offset-2 startgraphic">
+          <h3>MAN YOUR RESPECTIVE STARTING POSITIONS!!! THE EPIC RACE BETWEEN THE HARE AND THE TORTOISE IS AT HAND!</h3>
+
+            <h3><pre>PLAYER 1 ON THE "W" KEY.  PLAYER 2 ON THE "UP" ARROW KEY</pre></h3>
+
+               <h2> READY. SET. AND.</h2>
+               <div>
+          <h1> GOOO!!!!!!!!!!!!!</h1>
+          <button id="gobutton" type="button" class="btn btn-success">RACE NOW!!!</button>
+          <img src="hare.vs.tortoise.start.gif"/>
+            </div>
+
+      </div>
+      <div class="col-md-8 col-md-offset-2 winnergraphic1">
+        <h1>Player 1, the Hare has won the race!! Damn, you kept it one hunnit!</h1>
+        <h3>Those hares sure are FAST! Wow!</h3>
+        <br>
+        <img src=bugswins.gif alt="Hare wins"/>
+      </div>
+      <div class="col-md-8 col-md-offset-2 winnergraphic2">
+        <h1>Player 2, the Tortoise WON! As a wise woman once said, slow and steady surely does win the race!</h1>
+        <h3>That tortoise is keepin it gully right about now!</h3><br>
+        <img src=ooh.gif alt="Tortoise wins"/>
+      </div>
+      <div class="row">
+          <!-- <div class="col-md-12 winnergraphic"></div> -->
+          <div class="col-md-2" id="leftcolumn">
+               <button id="reset" value="reset" type="button" class="btn btn-primary">Reset</button>
+
+               <button id="changecourse" value="changecourse" type="button" class="btn btn-primary">Switch Course
+               </button>
+                <div id="leftpane">
+                  <button id="startbutton" type="button" class="btn btn-primary">START GAME!</button>
+                     <p id="player1instructions">Player 1, Move your tortoise by pressing the "W" KEY!</p>
+               </div>
+               <div id="signature"> Designed by Ted Anyansi</div>
+          </div>
+
+          <div class="col-md-7 board">
+              <div id="finishline1">FINISH</div>
+              <div id="finishline2">FINISH</div>
+              <div id="halfwaypoint"></div>
+              <div id="harepic" class="player1"></div>
+              <div id="tortoisepic" class="player2"></div>
+             <div id="startline1">START</div>
+             <div id="startline2">START</div>
+          </div>
+          <div class="col-md-3 rightcolumn" style="position:relative;width:267px;height:25px;overflow:hidden;">
+                  <div style="position:absolute;top:-276px;left:-5px">
+                  <!-- <button id="playmusic" value="playmusic">Play Music</button> -->
+                      <iframe width="300" height="300"
+                      src="https://www.youtube.com/embed/K8GRDNU50b8">
+                      </iframe>
+                  </div>
+                  <div>
+                  <button id="playmusic" style="position:relative;width:267px;height:25px;overflow:hidden" value="playmusic">CLICK BLACK BAR TO LEFT FOR MUSIC!
+                  </button>
+
+                 </div>
 
 
-  <div class="col-md-3" style="position:relative;width:267px;height:25px;overflow:hidden;">
-  <div style="position:absolute;top:-276px;left:-5px">
-      <!-- <button id="playmusic" value="playmusic">Play Music</button> -->
-  <iframe width="300" height="300"
-    src="https://www.youtube.com/embed/K8GRDNU50b8">
-  </iframe>
+
+          </div>
+          <div class="col-md-3 rightpane">
+              <p id="player2instructions">Player 2, Move your hare by pressing the "UP" Arrow KEY!</p>
+          </div>
+     </div>
   </div>
-  </div>
-  <button id="playmusic" style="position:relative;width:267px;height:25px;overflow:hidden" value="playmusic">CLICK BLACK BAR FOR MUSIC!</button>
-  </div>
-  </div>
-  </div>
-  </div>
+
 </body>
 </html>
